@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 60%;
+    margin-bottom: 4px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+pre {
+    background-color: #f6f8fa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 32px 0;
+    background: rgb(177, 206, 240);
+}
+
+.step {
+    border-bottom: 5px gray solid;
+    margin-bottom: 24px;
+}
+
+.desc {
+    border-bottom: 1px gray dashed;
+    margin-bottom: 8px;
+}
+
+.code {
+    background: rgb(231, 231, 231);
+    font-weight: 300;
+    padding: 0 8px;
+    font-size: 16px;
+}
+
+.key {
+    color: rgb(102, 176, 245);
+}
+
+.string {
+    color: rgb(201, 130, 0);
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scss-guide</title>
+
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>一、Scss傳統編譯方法</h1>
+
+        <div class="step">
+            <div class="desc">
+                <p>1) 在終端機執行<span class="code">npm init -f</span>，這步驟是為了產生一個名叫package.json的設定檔</p>
+            </div>
+
+            <img src="./src/images/01.png" alt="">
+            <img src="./src/images/02.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>2) 打開package.json，找到裡面的<span class="code">"test": "echo \"Error: no test specified\" && exit 1"區塊</span></p>
+            </div>
+            <img src="./src/images/03.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>3) 在步驟2的程式碼最後面加上一個<span class="code">,</span>，接著換下一行輸入sass編譯指令</p>
+                <p>指令構造為<span class="code">"【指令的名稱】": "sass 【輸入的scss檔案位置+檔名】 【輸出的css檔案位置+檔名】 --watch"</span></p>
+                <p>例如以這次範例的檔案構造來說，指令就會是<span class="code">"build": "sass scss/style.scss src/css/style.css --watch"</span></p>
+            </div>
+            <img src="./src/images/04.png" alt="">
+            <img src="./src/images/05.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>4) 完成後，每次需編譯時只要打開終端機，執行<span class="code">npm run 【指令的名稱】</span>即可</p>
+                <p>例如本次範例，就是執行<span class="code">npm run build</span></p>
+            </div>
+
+            <img src="./src/images/06.png" alt="">
+        </div>
+
+
+        <h1>二、使用外掛程式Live Sass Compiler的編譯方法</h1>
+
+        <div class="step">
+            <div class="desc">
+                <p>1) 安裝外掛程式並啟用</p>
+            </div>
+
+            <img src="./src/images/07.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>2) 進入【檔案】->【喜好設定】->【設定】(或Ctrl+,)，叫出VS Code的設定檔</p>
+            </div>
+
+            <img src="./src/images/08.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>3) 打開【延伸模組】->【Live Sass Compiler Config】->【在setting.json內編輯】，叫出設定檔的本體setting.json</p>
+            </div>
+
+            <img src="./src/images/09.png" alt="">
+            <img src="./src/images/10.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>4) 在最後一條設定後面加上<span class="code">,</span>後，換下一行，貼上以下片段並存檔：</p>
+                <pre>
+<span class="key">"liveSassCompile.settings.formats"</span>:[
+    {
+        <span class="key">"format"</span>: <span class="string">"expanded"</span>,
+        <span class="key">"extensionName"</span>: <span class="string">".css"</span>,
+        <span class="key">"savePath"</span>: <span class="string">"/src/css"</span>
+    }
+]
+                </pre>
+            </div>
+
+            <img src="./src/images/11.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>5) 上面片段的每個設定是：</p>
+                <pre>
+<span class="key">"liveSassCompile.settings.formats"</span>:[
+    {
+        <span class="key">"format"</span>: <span class="string">"【編譯出的css檔案的換行方式】"</span>,
+        <span class="key">"extensionName"</span>: <span class="string">"【編譯出的檔案的預設附檔名】"</span>,
+        <span class="key">"savePath"</span>: <span class="string">"【編譯出的檔案的存檔路徑 (路徑相對於專案的跟目錄)】"</span>
+    }
+]
+                </pre>
+                <p>更多詳細設定可到<a href="https://github.com/ritwickdey/vscode-live-sass-compiler/blob/master/docs/settings.md">Live Sass Compiler設定</a>參考</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>補充) Live Sass Compiler會掃描專案底下所有的.scss檔案編譯，所以不用指定來源檔案路徑</p>
+                <p>(但編譯時，會跳過以底線<span class="code">_</span>開頭命名的檔案)</p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
