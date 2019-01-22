@@ -15,7 +15,7 @@
 
         <div class="step">
             <div class="desc">
-                <p>1) 在終端機執行<span class="code">npm init -f</span>，這步驟是為了產生一個名叫package.json的設定檔</p>
+                <p>1) 在終端機執行<span class="code">npm init -f</span>，這步驟是為了產生一個名叫package.json的設定檔，之後需要用到。</p>
             </div>
 
             <img src="./src/images/01.png" alt="">
@@ -24,14 +24,23 @@
 
         <div class="step">
             <div class="desc">
-                <p>2) 打開package.json，找到裡面的<span class="code">"test": "echo \"Error: no test specified\" && exit 1"區塊</span></p>
+                <p>2) 在終端機執行<span class="code">npm install sass</span>來把Sass安裝到專案資料夾。安裝完後專案目錄下會出現一個node_modules資料夾來放相關檔案</p>
+            </div>
+
+            <img src="./src/images/01-1.png" alt="">
+            <img src="./src/images/01-2.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>3) 打開package.json，找到裡面的<span class="code">"test": "echo \"Error: no test specified\" && exit 1"區塊</span></p>
             </div>
             <img src="./src/images/03.png" alt="">
         </div>
 
         <div class="step">
             <div class="desc">
-                <p>3) 在步驟2的程式碼最後面加上一個<span class="code">,</span>，接著換下一行輸入sass編譯指令</p>
+                <p>4) 在步驟2的程式碼最後面加上一個<span class="code">,</span>，接著換下一行輸入sass編譯指令</p>
                 <p>指令構造為<span class="code">"【指令的名稱】": "sass 【輸入的scss檔案位置+檔名】 【輸出的css檔案位置+檔名】 --watch"</span></p>
                 <p>例如以這次範例的檔案構造來說，指令就會是<span class="code">"build": "sass scss/style.scss src/css/style.css --watch"</span></p>
             </div>
@@ -41,7 +50,7 @@
 
         <div class="step">
             <div class="desc">
-                <p>4) 完成後，每次需編譯時只要打開終端機，執行<span class="code">npm run 【指令的名稱】</span>即可</p>
+                <p>5) 完成後，每次需編譯時只要打開終端機，執行<span class="code">npm run 【指令的名稱】</span>即可</p>
                 <p>例如本次範例，就是執行<span class="code">npm run build</span></p>
             </div>
 
