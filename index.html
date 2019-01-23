@@ -24,11 +24,22 @@
 
         <div class="step">
             <div class="desc">
-                <p>2) 在終端機執行<span class="code">npm install sass</span>來把Sass安裝到專案資料夾。安裝完後專案目錄下會出現一個node_modules資料夾來放相關檔案</p>
+                <p>2)<span class="alert"> (這步驟已不需要執行，請看下面步驟2-1)</span> </p>
+                <p>在終端機執行<span class="code">npm install sass</span>來把Sass安裝到專案資料夾。安裝完後專案目錄下會出現一個node_modules資料夾來放相關檔案</p>
             </div>
 
             <img src="./src/images/01-1.png" alt="">
             <img src="./src/images/01-2.png" alt="">
+        </div>
+
+        <div class="step">
+            <div class="desc">
+                <p>2-1) <span class="alert">(若已經安裝過請跳過這步驟)</span></p>
+                <p>在終端機執行<span class="code">sudo npm install sass -g</span>來把Sass安裝到整台電腦。輸入後需要打入電腦的登入密碼。</p>
+                <p><span class="code">sudo</span>是用來取得蘋果電腦的管理者權限，<span class="code">-g</span>則是代表要安裝到整台電腦</p>
+            </div>
+
+            <img src="./src/images/02-1.png" alt="">
         </div>
 
         <div class="step">
@@ -41,8 +52,8 @@
         <div class="step">
             <div class="desc">
                 <p>4) 在步驟2的程式碼最後面加上一個<span class="code">,</span>，接著換下一行輸入sass編譯指令</p>
-                <p>指令構造為<span class="code">"【指令的名稱】": "sass 【輸入的scss檔案位置+檔名】 【輸出的css檔案位置+檔名】 --watch"</span></p>
-                <p>例如以這次範例的檔案構造來說，指令就會是<span class="code">"build": "sass scss/style.scss src/css/style.css --watch"</span></p>
+                <p>指令構造為<span class="code"><span class="key">"【指令的名稱】"</span>: <span class="string">"sass 【輸入的scss檔案位置+檔名】 【輸出的css檔案位置+檔名】 --watch"</span></span></p>
+                <p>例如以這次範例的檔案構造來說，指令就會是<span class="code"><span class="key">"build"</span>: <span class="string">"sass scss/style.scss src/css/style.css --watch"</span></span></p>
             </div>
             <img src="./src/images/04.png" alt="">
             <img src="./src/images/05.png" alt="">

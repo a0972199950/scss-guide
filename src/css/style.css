@@ -53,4 +53,9 @@ h1 {
   color: #c98200;
 }
 
+.alert {
+  color: red;
+  font-weight: 900;
+}
+
 /*# sourceMappingURL=style.css.map */
